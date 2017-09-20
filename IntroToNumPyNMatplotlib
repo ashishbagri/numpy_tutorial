@@ -1,0 +1,43 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+my_list = [1,2,3,4]
+print type(my_list)
+
+my_listarr  = np.array(my_list)
+print type(my_listarr)
+
+print my_listarr.shape
+
+arr = np.zeros((4,2),dtype=np.uint8)
+print arr.shape
+print arr.dtype
+
+my_arr = np.zeros((4,2))
+
+my_arr[:,0]+=1
+my_arr[:,1]+=2
+
+print np.unique(my_arr,return_counts=True)
+
+ones = np.ones((4,2),dtype=np.uint8)
+print np.unique(ones)
+
+a = np.array(range(1,100))
+
+#plot figure
+plt.plot(a,'r>')
+plt.show()
+
+#plot_next figure
+
+plt.plot(a**2,a,'g+')
+plt.show()
+
+#choose random array
+arr = np.random.random((1000,2))
+arr1 = np.random.random((1000000,2))
+
+plt.scatter(arr[:,0],arr[:,1],color='black')
+#plt.scatter[arr1[:,0],arr1[:,1],color='greeb')
+plt.show()
