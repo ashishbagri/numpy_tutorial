@@ -1,0 +1,23 @@
+#Calculate length of a list
+my_list = [1,2,3,4,5]
+print len(my_list)
+
+#which will create a list: -
+# some_list = list()
+# some_list = list([1, 2, 3])
+# some_list = [1, 2, 3]
+# some_list = list(1, 2, 3)
+
+some_list = list()
+print len(some_list) #should return 0 as this will create an empty list
+
+some_list = list([1,2,3,4])
+print some_list #allowed
+
+some_list = [1,2,3,4,5,6,7] #allowed
+
+#some_list = list(1,2,3) #not allowed
+print  some_list
+
+#print the last 3 elements of a list without using for loops.
+print some_list[-3:]

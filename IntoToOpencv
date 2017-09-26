@@ -1,0 +1,25 @@
+import cv2
+import matplotlib.pyplot as plt
+
+#read image from system
+ig = cv2.imread('./test_img.jpg')
+#check the shape of the image
+print ig.shape
+
+ig = cv2.resize(ig,(1000,1000))
+print ig.shape
+
+
+ig = cv2.cvtColor(
+    ig, cv2.COLOR_BGR2GRAY
+)
+
+print ig.shape
+
+blurred = cv2.GaussianBlur(ig, (5,5),0)
+
+print blurred.shape
+
+plt.imshow(ig)
+plt.show()
+

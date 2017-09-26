@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+ds = pd.read_csv('./movie_metadata.csv')
+
+data = ds.values
+
+print data.shape
+
+ds.tail(n=3)
+
+titles = ds.get('movie_title')
+
+print len(titles)
+
+count = 0
+for ix in titles:
+    if(count<=10):
+        print ix
+    count+=1
